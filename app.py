@@ -231,4 +231,12 @@ with gr.Blocks(
     """)
 
 if __name__ == "__main__":
-    demo.launch(share=True, server_name="0.0.0.0")
+    
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 7860))
+    demo.launch(
+        share=False,
+        server_name="0.0.0.0",
+        server_port=port
+    )
+    
